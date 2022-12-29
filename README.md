@@ -44,9 +44,9 @@ Upon running the script, all the available files from the EUMETSAT datastore, co
 ```
 yyyymmddThhMMss.zip
 ```
-For example, a data file downloaded for `15 January 2011` and time `16:45:00`, will be saved as:
+For example, a data file downloaded for `12 January 2011` and time `16:45:00`, will be saved as:
 ```
-20110115T164500.zip
+20110112T164500.zip
 ```
 
 ## License
