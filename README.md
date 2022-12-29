@@ -40,6 +40,14 @@ python downloadData.py
 ```
 **Note:** Make sure that your terminal path is same as the directory in which you have stored the `downloadData.py` file.
 
+Upon running the script, all the available files from the EUMETSAT datastore, corresponding to the specified product name and for the specified timestamps, will be downloaded in the specified data directory. These files will be in `.zip` format and are named according to their timestamp as per the following convention:
+```
+yyyymmddThhMMss.zip
+```
+For example, a data file downloaded for `15 January 2011` and time `16:45:00`, will be saved as:
+```
+20110115T164500.zip
+```
 
 ## License
 [GNU General Public License v3.0](LICENSE)
