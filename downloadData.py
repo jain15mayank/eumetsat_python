@@ -140,7 +140,7 @@ while start-end<datetime.timedelta(seconds=0):
     
     # Start downloading the retrieved products
     if pFLAG:
-        Parallel(n_jobs=nProcesses, verbose=10)(delayed(EUMETSATproductToImage)(product, str(pid)) for pid,product in enumerate(products))
+        Parallel(n_jobs=nProcesses, verbose=10)(delayed(downloadNsave)(product, str(pid)) for pid,product in enumerate(products))
     else:
         for product in products:
-            EUMETSATproductToImage(product)
+            downloadNsave(product)
