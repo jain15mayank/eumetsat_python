@@ -71,8 +71,8 @@ def downloadNsave (product, tempDirExt):
         return
     
     # Parse the EOPMetadata.xml to find the timestamp of the product
-    if os.path.exists(DirToUse+'EOPMetadata.xml'):
-        tree = ET.parse(DirToUse+'EOPMetadata.xml')
+    if os.path.exists(tempDir+'EOPMetadata.xml'):
+        tree = ET.parse(tempDir+'EOPMetadata.xml')
     else:
         raise AssertionError('Error - EOPMetadata.xml file not found!')
     
@@ -143,4 +143,4 @@ while start-end<datetime.timedelta(seconds=0):
         Parallel(n_jobs=nProcesses, verbose=10)(delayed(downloadNsave)(product, str(pid)) for pid,product in enumerate(products))
     else:
         for product in products:
-            downloadNsave(product)
+            downloadNsave(product, 'temporary')
